@@ -118,7 +118,7 @@ submission_ui <- shiny::div(
   shiny::tags$ol(
     shiny::tags$li("Klicke auf den Button, um die Datei mit deinen Antworten herunterzuladen."),
     shiny::tags$li("Speichere die Datei an einem geeigneten Ort auf deinem Computer. Benenne die Datei dabei nach dem Schema nachname_uebung_nr.html."),
-    shiny::tags$li("Wenn Du zu dieser Übung auch die Praxisaufgabe bearbeitet hast, reiche das R-Skript zusammen mit der heruntergeladenen HTML-Datei ein, indem du beide Datein per Mail an l.poggel@fu-berlin.de schickst. Der Dateiname beider Dateien sollte dem Schema `nachname_uebung_nr.R` bzw. `nachname_uebung_nr.html` folgen.")),
+    shiny::tags$li("Wenn du zu dieser Übung auch die Praxisaufgabe bearbeitet hast, reiche das R-Skript zusammen mit der heruntergeladenen HTML-Datei ein, indem du beide Datein per Mail an l.poggel@fu-berlin.de schickst. Der Dateiname beider Dateien sollte dem Schema `nachname_uebung_nr.R` bzw. `nachname_uebung_nr.html` folgen.")),
   shiny::fluidPage(
     shiny::mainPanel(
       shiny::div(id = "form",
