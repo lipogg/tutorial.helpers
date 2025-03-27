@@ -112,22 +112,23 @@ submission_server <- function() {
 
 submission_ui <- shiny::div(
 
-  "When you have completed this tutorial, follow these steps:",
+  "Wenn du alle Fragen beantwortet hast, folge diesen Schritten:",
 
   shiny::tags$br(),
   shiny::tags$ol(
-    shiny::tags$li("Click the button to download a file containing your answers."),
-    shiny::tags$li("Save the file onto your computer in a convenient location.")),
+    shiny::tags$li("Klicke auf den Button, um die Datei mit deinen Antworten herunterzuladen."),
+    shiny::tags$li("Speichere die Datei an einem geeigneten Ort auf deinem Computer. Benenne die Datei dabei nach dem Schema nachname_uebung_nr.html."),
+    shiny::tags$li("Wenn Du zu dieser Übung auch die Praxisaufgabe bearbeitet hast, reiche das R-Skript zusammen mit der heruntergeladenen HTML-Datei ein, indem du beide Datein per Mail an l.poggel@fu-berlin.de schickst. Der Dateiname beider Dateien sollte dem Schema `nachname_uebung_nr.R` bzw. `nachname_uebung_nr.html` folgen.")),
   shiny::fluidPage(
     shiny::mainPanel(
       shiny::div(id = "form",
-                 shiny::downloadButton(outputId = "downloadHtml", label = "Download HTML"))
+                 shiny::downloadButton(outputId = "downloadHtml", label = "Antworten herunterladen"))
     )
   ),
   shiny::div(
     shiny::tags$br(),
     
-    "(If no file seems to download, try clicking with the alternative button on the download button and choose \"Save link as...\")",
+    "(Falls keine Datei heruntergeladen wird, versuche, mit der rechten Maustaste auf den Button zu klicken und wähle \"Link speichern unter…\" bzw. \"Save link as...\")",
     
     shiny::tags$br()
     )
