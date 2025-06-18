@@ -58,14 +58,17 @@ write_answers <- function(file, session, is_test = FALSE){
 
   # Create tibble for saving. Should this be re-organized? Are there better
   # variable names? Better ways to include tutorial information?
-
+  # if else clause adds support for answers with multiple parts, i.e. from sortable 
   out <- tibble::tibble(
     id = purrr::map_chr(objs, "id",
                         .default = NA),
     submission_type = purrr::map_chr(objs, "type",
                                      .default = NA),
-    answer = purrr::map_chr(objs, "answer",
-                            .default = NA)
+    answer = purrr::map_chr(
+      objs,
+      ~ if (length(.x$answer) > 1) paste(.x$answer, collapse = ", ") else as.character(.x$answer),
+      .default = NA
+    )
   )
 
   # Hacky
